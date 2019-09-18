@@ -1,7 +1,8 @@
+---
 - name: Install aptitude using apt
   apt: 
     name: aptitude
-    state: latest 
+    state: present 
     update_cache: yes 
     force_apt_get: yes
 
@@ -20,4 +21,4 @@
     state: present
 
 - name: Update apt and install docker-ce
-  apt: update_cache=yes name=docker-ce state=latest
+  apt: update_cache=yes name=docker-ce state=present
